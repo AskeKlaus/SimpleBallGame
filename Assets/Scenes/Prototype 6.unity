@@ -821,11 +821,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3271c7c76ffd1d34cb4ecca6c2cd94a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveCameraIsActive: 0
   offsets:
   - {x: 0, y: 5, z: -1}
   - {x: 1, y: 5, z: 0}
   - {x: 0, y: 5, z: 1}
   - {x: -1, y: 5, z: 0}
+  speed: 6
 --- !u!54 &963194230
 Rigidbody:
   m_ObjectHideFlags: 0
