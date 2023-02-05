@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CameraSwitcher.cs" />
+    <Compile Include="Assets\Scripts\FocalPointRotation.cs" />
+    <Compile Include="Assets\Scripts\CinemachineController.cs" />
     <Compile Include="Assets\Scripts\Counter.cs" />
   </ItemGroup>
   <ItemGroup>

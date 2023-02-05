@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject focalPoint;
+    [SerializeField] private float speed = 1;
     private Rigidbody playerRb;
     void Start()
     {
@@ -15,8 +16,8 @@ public class PlayerController : MonoBehaviour
     {
         float forwardInput = Input.GetAxis("Vertical");
         float sideInput = Input.GetAxis("Horizontal");
-        playerRb.AddForce(focalPoint.transform.forward * forwardInput);
-        playerRb.AddForce(focalPoint.transform.right * sideInput);
+        playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
+        playerRb.AddForce(focalPoint.transform.right * sideInput * speed);
     }
 
     void Move()
