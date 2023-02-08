@@ -7,22 +7,40 @@ using TMPro;
 
 public class Counter : MonoBehaviour
 {
-    public TextMeshProUGUI counterText;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
-    private int count = 0;
+    private int score = 0;
+    private int reduceRate = 1;
+    private int pointsPerObject = 10;
 
     private void Start()
     {
-        count = 0;
+        score = 100;
+        StartCoroutine(ReduceCount());
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlusPoint"))
         {
-            count += 1;
-            counterText.text = "Count : " + count + "/10";
+            UpdateScore(pointsPerObject);
+            Destroy(other.gameObject);
         }
 
+    }
+
+    IEnumerator ReduceCount()
+    {
+        while (score > 0)
+        {
+            yield return new WaitForSeconds(reduceRate);
+            UpdateScore(-reduceRate);
+        }
+    }
+
+    public void UpdateScore(int scoreToAdd)
+    {
+        score += scoreToAdd;
+        scoreText.text = "Score: " + score;
     }
 }

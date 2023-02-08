@@ -22,23 +22,23 @@ public class FocalPointRotation : MonoBehaviour
         switch (activeCamera)
         {
             case 0:
-                rotation = new Vector3(60, 0, 0);
+                rotation = new Vector3(0, 0, 0);
                 break;
 
             case 1:
-                rotation = new Vector3(60, -270, 0);
+                rotation = new Vector3(0, -270, 0);
                 break;
 
             case 2:
-                rotation = new Vector3(60, -180, 0);
+                rotation = new Vector3(0, -180, 0);
                 break;
 
             case 3:
-                rotation = new Vector3(60, -90, 0);
+                rotation = new Vector3(0, -90, 0);
                 break;
 
             default:
-                rotation = new Vector3(60, 0, 0);
+                rotation = new Vector3(0, 0, 0);
                 break;
         }
         transform.eulerAngles = rotation;
