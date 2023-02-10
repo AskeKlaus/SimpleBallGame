@@ -5,7 +5,6 @@ using Cinemachine;
 
 public class CinemachineController : MonoBehaviour
 {
-    public static int numberOfCamera = 0;
     [SerializeField] CinemachineVirtualCamera frontCam;
     [SerializeField] CinemachineVirtualCamera rightCam;
     [SerializeField] CinemachineVirtualCamera backCam;
@@ -18,7 +17,7 @@ public class CinemachineController : MonoBehaviour
         CameraSwitcher.Register(rightCam);
         CameraSwitcher.Register(backCam);
         CameraSwitcher.Register(leftCam);
-        CameraSwitcher.SwitchCamera(frontCam);
+        CameraSwitcher.ChooseActiveCamera(frontCam);
     }
 
     private void OnDisable()
@@ -31,26 +30,6 @@ public class CinemachineController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.E))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (numberOfCamera < CameraSwitcher.cameras.Count - 1)
-                {
-                    numberOfCamera++;
-                }
-                else numberOfCamera = 0;
-            }
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                if (numberOfCamera > 0)
-                {
-                    numberOfCamera--;
-                }
-                else numberOfCamera = CameraSwitcher.cameras.Count - 1;
-            }
-            CameraSwitcher.SwitchCamera(CameraSwitcher.cameras[numberOfCamera]);
-        }
+        CameraSwitcher.SwitchCamera();
     }
 }

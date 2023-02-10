@@ -14,14 +14,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        MovePlayer();
+    }
+
+    void MovePlayer()
+    {
         float forwardInput = Input.GetAxis("Vertical");
         float sideInput = Input.GetAxis("Horizontal");
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
         playerRb.AddForce(focalPoint.transform.right * sideInput * speed);
-    }
-
-    void Move()
-    {
-        
     }
 }

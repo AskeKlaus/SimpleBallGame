@@ -13,12 +13,12 @@ public class FocalPointRotation : MonoBehaviour
 
     void Update()
     {
-        activeCamera = CinemachineController.numberOfCamera;
         AdjustRotation();
     }
 
     void AdjustRotation()
     {
+        activeCamera = CameraSwitcher.numberOfCamera;
         switch (activeCamera)
         {
             case 0:
