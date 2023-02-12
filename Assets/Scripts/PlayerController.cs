@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         float forwardInput = Input.GetAxis("Vertical");
         float sideInput = Input.GetAxis("Horizontal");
-        playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
-        playerRb.AddForce(focalPoint.transform.right * sideInput * speed);
+        playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed * Time.deltaTime);
+        playerRb.AddForce(focalPoint.transform.right * sideInput * speed * Time.deltaTime);
     }
 }

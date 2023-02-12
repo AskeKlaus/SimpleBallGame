@@ -57,10 +57,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\MeshProcessing\SplineExtrusion.cs" />
     <Compile Include="Assets\Scripts\CameraSwitcher.cs" />
+    <Compile Include="Assets\Scripts\AnimationScript.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\ExampleSower.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\MeshProcessing\SourceMesh.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Bezier\SplineNode.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Utils\UOUtility.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\ExampleFollowSpline.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\ExampleContortAlong.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Utils\MeshUtility.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\ExampleGrowingRoot.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Bezier\CubicBezierCurve.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\MeshProcessing\SplineMeshTiling.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\MeshProcessing\MeshVertex.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\MeshProcessing\ExtrusionSegment.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\RopeBuilder.cs" />
     <Compile Include="Assets\Scripts\FocalPointRotation.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\ExampleTrack.cs" />
+    <Compile Include="Assets\Scripts\MainMenuUi.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Utils\CameraUtility.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Bezier\Spline.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\MeshProcessing\MeshBender.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Bezier\CurveSample.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Example\ExampleTentacle.cs" />
     <Compile Include="Assets\Scripts\CinemachineController.cs" />
     <Compile Include="Assets\Scripts\Counter.cs" />
+    <Compile Include="Assets\SplineMesh\Scripts\Bezier\SplineSmoother.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -83,6 +106,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\SplineMesh\Doc.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>

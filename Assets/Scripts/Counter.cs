@@ -12,9 +12,11 @@ public class Counter : MonoBehaviour
     private int score = 0;
     private int reduceRate = 1;
     private int pointsPerObject = 10;
+    public bool isGameGoing = false;
 
     private void Start()
     {
+        isGameGoing= true;
         score = 100;
         StartCoroutine(ReduceCount());
     }
@@ -26,12 +28,16 @@ public class Counter : MonoBehaviour
             UpdateScore(pointsPerObject);
             Destroy(other.gameObject);
         }
+        else if (other.CompareTag("Boundry"))
+        {
+            isGameGoing = false;
+        }
 
     }
 
     IEnumerator ReduceCount()
     {
-        while (score > 0)
+        while (isGameGoing && score > 0)
         {
             yield return new WaitForSeconds(reduceRate);
             UpdateScore(-reduceRate);

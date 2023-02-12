@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlusPoint
   - Ground
+  - Boundry
   layers:
   - Default
   - TransparentFX
